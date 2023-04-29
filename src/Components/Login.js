@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const LoginContainer = styled.div`
@@ -37,6 +38,10 @@ const LoginForm = styled.form`
 	justify-content: center;
 	width: 100%;
 	max-width: 400px;
+`;
+
+const RegisterLink = styled(Link)`
+	margin-top: 1rem;
 `;
 
 const Login = () => {
@@ -90,6 +95,7 @@ const Login = () => {
 					</div>
 					<button type="submit">Login</button>
 				</LoginForm>
+				<RegisterLink to="">Register</RegisterLink>
 			</LoginFormContainer>
 		</LoginContainer>
 	);
