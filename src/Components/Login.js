@@ -1,5 +1,43 @@
 import React, { useState } from "react";
-// import { Redirect } from "react-router-dom";
+import styled from "styled-components";
+
+const LoginContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+`;
+
+const LeftContainer = styled.div`
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #f8f8f8;
+`;
+
+const Title = styled.h1`
+	font-size: 3rem;
+	margin-bottom: 1rem;
+`;
+
+const LoginFormContainer = styled.div`
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+`;
+
+const LoginForm = styled.form`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 400px;
+`;
 
 const Login = () => {
 	const [username, setUsername] = useState("");
@@ -25,30 +63,35 @@ const Login = () => {
 	// }
 
 	return (
-		<div>
-			<h1>Login</h1>
-			<form onSubmit={handleLogin}>
-				<div>
-					<label htmlFor="username">Username:</label>
-					<input
-						type="text"
-						id="username"
-						value={username}
-						onChange={(e) => setUsername(e.target.value)}
-					/>
-				</div>
-				<div>
-					<label htmlFor="password">Password:</label>
-					<input
-						type="password"
-						id="password"
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}
-					/>
-				</div>
-				<button type="submit">Login</button>
-			</form>
-		</div>
+		<LoginContainer>
+			<LeftContainer>
+				<Title>Travel Buddies</Title>
+			</LeftContainer>
+			<LoginFormContainer>
+				<h1>Login</h1>
+				<LoginForm onSubmit={handleLogin}>
+					<div>
+						<label htmlFor="username">Username:</label>
+						<input
+							type="text"
+							id="username"
+							value={username}
+							onChange={(e) => setUsername(e.target.value)}
+						/>
+					</div>
+					<div>
+						<label htmlFor="password">Password:</label>
+						<input
+							type="password"
+							id="password"
+							value={password}
+							onChange={(e) => setPassword(e.target.value)}
+						/>
+					</div>
+					<button type="submit">Login</button>
+				</LoginForm>
+			</LoginFormContainer>
+		</LoginContainer>
 	);
 };
 
