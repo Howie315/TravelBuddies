@@ -25,7 +25,7 @@
 import React, { Component } from "react";
 import ReactDom from "react-dom";
 import Login from "./Components/Login"; // Import the Login component
-
+import Home from "./Components/Home"; // Import the Login component
 function App() {
 	return (
 		<div className="App">

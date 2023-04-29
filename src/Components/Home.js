@@ -5,47 +5,59 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
 	height: 100vh;
 `;
 
-const InputWrapper = styled.div`
+const Title = styled.h1`
+	margin-top: 32px;
+	text-align: center;
+`;
+
+const InputWrapper = styled.form`
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	margin-bottom: 24px;
+	margin-top: 100px;
 `;
 
 const Input = styled.input`
-	padding: 8px 16px;
+	padding: 12px;
 	font-size: 16px;
 	border-radius: 8px;
 	border: 2px solid #ccc;
-	margin: 0 8px;
+	margin-bottom: 16px;
+	width: 100%;
+	max-width: 400px;
+	box-sizing: border-box;
+
+	&:focus {
+		outline: none;
+		border-color: #333;
+	}
 `;
 
 const Button = styled.button`
-	padding: 8px 16px;
+	padding: 12px;
 	font-size: 16px;
 	border-radius: 8px;
 	border: none;
 	background-color: #333;
 	color: #fff;
 	cursor: pointer;
+	transition: background-color 0.2s;
+
+	&:hover {
+		background-color: #555;
+	}
 `;
 
 const Home = () => {
 	return (
 		<Container>
-			<h1>Welcome to my Home Page</h1>
+			<Title>Welcome to My Website</Title>
 			<InputWrapper>
-				<label>Search Query 1:</label>
-				<Input type="text" placeholder="Enter your search query here" />
-				<Button>Search</Button>
-			</InputWrapper>
-			<InputWrapper>
-				<label>Search Query 2:</label>
-				<Input type="text" placeholder="Enter your search query here" />
+				<Input type="text" placeholder="Zip Code" />
+				<Input type="text" placeholder="Search Flight" />
 				<Button>Search</Button>
 			</InputWrapper>
 		</Container>
