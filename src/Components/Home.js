@@ -5,21 +5,19 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
 	height: 100vh;
 `;
 
 const Title = styled.h1`
-	margin-top: -1000;
-
+	margin-top: 32px;
 	text-align: center;
-	justify-content: top;
 `;
 
 const InputWrapper = styled.form`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 100px;
 `;
 
 const Input = styled.input`
